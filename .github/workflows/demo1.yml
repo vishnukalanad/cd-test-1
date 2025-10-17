@@ -1,5 +1,8 @@
 name: Events Demo 1
-on: [push, workflow_dispatch]
+on: 
+  pull_request:
+    types: [opened, edited]
+  # workflow_dispatch: --> this is another trigger and so on...
 jobs:
   deploy:
     runs-on: ubuntu-latest
